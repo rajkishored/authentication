@@ -129,6 +129,7 @@ hr{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 100;
   color: #545454;
+  word-spacing: 0.32rem;
   
   
 }
@@ -167,7 +168,7 @@ footer{
   }
   .ai_data{
    
-   font-size: 0.7rem;
+   font-size: 0.9rem;
   
   }
   .aii{
@@ -184,7 +185,7 @@ footer{
     position: fixed;
    left:41%;
    bottom: 0%;
-   color: #535353;
+   color: #252525;
   }
   .ai_data img{
     width: 100px;
