@@ -10,7 +10,8 @@ function Recover(){
     let [responsereturn,setresponsereturn]=useState('')
     let [enterotp,setenterotp]=useState(false);
 
-
+let url="https://sonnys-ai-app.onrender.com"
+    let url2="http://localhost:3001"
 let handleform=async(e)=>{
     e.preventDefault(); 
     setsend(true)
@@ -18,7 +19,7 @@ let handleform=async(e)=>{
     
 
     try{
-        let resposns= await axios.post("http://localhost:3001/otp",{maill})
+        let resposns= await axios.post(url+"/otp",{maill})
         setresponsereturn(resposns.data.message)
 
         if(resposns.data.message == "otp sent successfully"){

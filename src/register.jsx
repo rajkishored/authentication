@@ -7,7 +7,8 @@ import axios from "axios";
 function Register(){
 
     let [responseMessage,setResponseMessage]=useState('')
-
+let url="https://sonnys-ai-app.onrender.com"
+    let url2="http://localhost:3001"
     let [data,setdata]=useState({
         uname:"",
         upassword:"",
@@ -25,9 +26,9 @@ function Register(){
      console.log(data);
      
      try{
-     const response =await axios.post("http://localhost:3001/reg" ,data )
+     const response =await axios.post(url+"/reg" ,data )
      setResponseMessage(response.data.message); 
-     
+
      }
      catch(error){
         console.log(error.stack);

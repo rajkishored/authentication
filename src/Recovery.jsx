@@ -9,12 +9,14 @@ function Recovery({mail}){
     let [verify,setverify]=useState(false);
     let [enterotpp,setenterotpp]=useState(false);
     let [responsee,setresopnse]=useState('')
+    let url="https://sonnys-ai-app.onrender.com"
+    let url2="http://localhost:3001"
 
     let handleform=async(e)=>{
         setverify(true)
         e.preventDefault();
        try{
-           let response=await axios.post("http://localhost:3001/verify",{otp,mail})
+           let response=await axios.post(url+"/verify",{otp,mail})
                 setresopnse(response.data.message);
                 if(response.data.message=="OTP verified"){
                     setverify(false)

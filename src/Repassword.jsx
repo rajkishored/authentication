@@ -13,6 +13,8 @@ function Repass({maill}){
 
     let handleform=async(e)=>{
             e.preventDefault();
+            let url="https://sonnys-ai-app.onrender.com"
+    let url2="http://localhost:3001"
             
             if(npass!==cpass){
                 toast.warn('Password dosent match', {
@@ -23,7 +25,7 @@ function Repass({maill}){
             }
              
             try{
-                let responsee=await axios.post("http://localhost:3001/changepass",{maill,npass});
+                let responsee=await axios.post(url+"/changepass",{maill,npass});
                 setresponsr(responsee.data.message)
                 if(responsee.data.message=="password set successfully"){
                     

@@ -6,6 +6,8 @@ import Recover from "./forgotpass";
 
 function Login({setlog}){
 
+    let url="https://sonnys-ai-app.onrender.com"
+    let url2="http://localhost:3001"
      let [respons,setresopnse]=useState("");
      let [forgot,setforgot]=useState(false);
     let [dataa,setdataa]=useState({
@@ -25,7 +27,7 @@ function Login({setlog}){
          console.log(dataa);
        
 
-        let response=await axios.post("http://localhost:3001/log" ,dataa)
+        let response=await axios.post(url+"/log" ,dataa)
          setresopnse(response.data.message)
         
         if(response.data.message=="Successfull"){
