@@ -127,8 +127,8 @@ hr{
 }
 .pp{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 100;
-  color: #2b2b2b;
+  font-weight: 400;
+  color: #000000;
   word-spacing: 0.32rem;
   
   
@@ -180,6 +180,9 @@ footer{
   .aii form{
     text-align: left;
     margin-left: 8%;
+  }
+  .aii input{
+    width: 80%;
   }
   footer{
     position: fixed;
