@@ -128,7 +128,7 @@ hr{
 .pp{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 100;
-  color: #545454;
+  color: #2b2b2b;
   word-spacing: 0.32rem;
   
   
@@ -164,7 +164,7 @@ footer{
       width: 500px;
   }
   .st{
-    margin-top: 60%;
+    margin-top: 80%;
   }
   .ai_data{
    

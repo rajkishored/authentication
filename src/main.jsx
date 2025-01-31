@@ -5,7 +5,7 @@ import axios  from "axios";
 
 function Main(){
     let url="https://sonnys-ai-app.onrender.com"
-    let url2="http://localhost:3001"
+    // let url2="http://localhost:3001"
     let [data,setdata]=useState("");
     let [promptt,setpromptt]=useState("");
     let [load,setload]=useState(false)
@@ -43,7 +43,7 @@ function Main(){
       <p className="pp">{data}</p>
       </div>
         <footer>
-            <p style={{fontSize:"10px"}}>@rajkishoredjr</p>
+            <p style={{fontSize:"10px"}}>@rajkishoredjr2024</p>
         </footer>
         </div>
     )
