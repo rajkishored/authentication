@@ -79,7 +79,7 @@ function Login({setlog}){
           </form>
           <button className="forgot" onClick={()=>setforgot(true)}> forgot password?</button>
           <p>{respons}</p>
-          {(!load)? <p>logging...</p>: ''  }
+          {(load)? <p>logging...</p>: ''  }
 
           </div> : <Recover/>} 
            
