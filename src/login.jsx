@@ -26,16 +26,40 @@ function Login({setlog}){
          e.preventDefault();
          console.log(dataa);
        
-
+            try{
         let response=await axios.post(url+"/log" ,dataa)
-         setresopnse(response.data.message)
-        
-        if(response.data.message=="Successfull"){
+       
+        //  setresopnse(response.data.message)
+        //  console.log(response.data.token,"h");
+        //  localStorage.setItem('jws_token',response.data.token)
+        if(response.data.refreshToken || response.data.accessToken ){
+            console.log(response.data.refreshToken)
+            console.log(response.data.accessToken)
+            
+            localStorage.setItem('rjws_token',response.data.refreshToken)
+            localStorage.setItem('ajws_token',response.data.accessToken)
+
+        //    let a= localStorage.getItem('jws_token')
+        //    console.log(a,"this is");
            
             setlog(true);
-         }
-         
         }
+        else{
+            setresopnse(response.data.message );
+        }
+    }
+    catch(error){
+      setresopnse("try again")
+    }}
+        
+        // if(response.data.message=="Successfull"){
+           
+           
+        //     setlog(true);
+
+        //  }
+         
+        // }
 
 
 

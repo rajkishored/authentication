@@ -130,6 +130,7 @@ hr{
   font-weight: 400;
   color: #000000;
   word-spacing: 0.32rem;
+  /* position: relative; */
   
   
 }
@@ -140,6 +141,9 @@ hr{
  width: 50px;
   color: #FFFFFF;
   border-radius: 3px;
+}
+.aii_btn:hover{
+  background-color: #846ab6;
 }
 footer{
   position: fixed;
@@ -152,6 +156,25 @@ footer{
     top:18%;
     left:45%;
    
+}
+.lout{
+  transform: rotate(90deg);
+  font-weight: 600;
+  
+  position:'fixed';
+  position: absolute;
+  right: -24px;
+  margin: 0px;
+  background-color: #4fb6ff;
+  border: 1px #007BFF;
+ height: 28px;
+ width: 59px;
+  color: #FFFFFF;
+  border-radius: 3px;
+ 
+}
+.lout:hover{
+  background-color: #8fcbf5;
 }
 
 /* .aiifo{
@@ -194,6 +217,24 @@ footer{
     width: 100px;
     top:11%;
     left: 1%;
+  }
+  .lout{
+    transform: rotate(90deg);
+    font-weight: 400;
+    
+    position:'fixed';
+    position: absolute;
+    top: 60%;
+    right: -22px;
+    padding: 1px;
+    margin: 0px;
+    background-color: #4fb6ff;
+  border: 1px #007BFF;
+ height: 28px;
+ width: 59px;
+  color: #FFFFFF;
+  border-radius: 3px;
+   
   }
  
 }
