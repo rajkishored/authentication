@@ -10,6 +10,7 @@ function Login({setlog}){
     let url2="http://localhost:3001"
      let [respons,setresopnse]=useState("");
      let [forgot,setforgot]=useState(false);
+     let [load,setlode]=useState(false);
     let [dataa,setdataa]=useState({
            
             lpassword:"",
@@ -23,6 +24,7 @@ function Login({setlog}){
         }
     
         let handleform=async(e)=>{
+            setlode(true)
          e.preventDefault();
          console.log(dataa);
        
@@ -41,7 +43,7 @@ function Login({setlog}){
 
         //    let a= localStorage.getItem('jws_token')
         //    console.log(a,"this is");
-           
+           setlode(false);
             setlog(true);
         }
         else{
@@ -77,6 +79,7 @@ function Login({setlog}){
           </form>
           <button className="forgot" onClick={()=>setforgot(true)}> forgot password?</button>
           <p>{respons}</p>
+          {(!load)? <p>logging...</p>: ''  }
 
           </div> : <Recover/>} 
            
