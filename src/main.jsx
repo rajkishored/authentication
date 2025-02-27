@@ -7,10 +7,14 @@ function Main({setlog}){
     let url="https://sonnys-ai-app.onrender.com"
     let url2="http://localhost:3001"
     let [data,setdata]=useState("");
-    let [promptt,setpromptt]=useState("");
+    let [promptt,setpromptt]=useState('');
     let [load,setload]=useState(false)
 
 
+
+    let handlechange=(e)=>{
+        setpromptt(e.target.value)
+    }
     // useEffect(()=>{
     //     handlesub();
     // },[])
@@ -60,7 +64,10 @@ function Main({setlog}){
       
          console.log(response.data.message);
          setdata(response.data.message)
+        
          setload(false)
+         document.getElementById("ask").value="";
+
          
             }
 
@@ -119,7 +126,7 @@ function Main({setlog}){
       
         <div className="aii">
            <form onSubmit={handlesub}>
-            <input type="text"  onChange={(e)=>setpromptt(e.target.value)} required placeholder="Ask me anything...."/>
+            <input type="text" id="ask"  onChange={handlechange} required placeholder="Ask me anything...."/>
         <button  className="aii_btn" type="submit">Get</button>
        
         </form> 
