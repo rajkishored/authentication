@@ -48,6 +48,10 @@ function Login({setlog}){
         }
         else{
             setresopnse(response.data.message );
+            if(response.data.message =="wrong password"){
+                setlode(false)
+            }
+
         }
     }
     catch(error){
@@ -79,7 +83,7 @@ function Login({setlog}){
           </form>
           <button className="forgot" onClick={()=>setforgot(true)}> forgot password?</button>
           <p>{respons}</p>
-          {(load)? <p>logging...</p>: ''  }
+          {(load)? <img  src="spin.gif" width={50}/>: ''  }
 
           </div> : <Recover/>} 
            

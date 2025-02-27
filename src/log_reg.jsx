@@ -12,7 +12,12 @@ function Page(){
 let url="https://sonnys-ai-app.onrender.com";
     let [log,setlog]=useState(false);
 
-
+    useEffect(()=>{
+    
+        Check();
+       
+       
+      },[])
 
 
     let refreshToken=async()=>{
@@ -36,24 +41,20 @@ let url="https://sonnys-ai-app.onrender.com";
         }
     };
 
-   useEffect(()=>{
-    
-     Check();
-    
-    
-   },[])
+  
 
    let Check=async()=>{
     
+   
      let atoken=localStorage.getItem("ajws_token");
-    //  console.log(atoken);
+     console.log(atoken);
      
      if(!atoken){
         // alert("please login");
         return;
     } 
     try{
-       let resp=await axios.post(url2+"/access_chec",{atoken},{
+       let resp=await axios.post(url+"/access_chec",{atoken},{
         headers:{
             Authorization: `Bearer ${atoken}`
        }}
